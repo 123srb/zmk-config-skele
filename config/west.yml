@@ -10,5 +10,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: zmk-keyboard-skeletyl-handwired
+      url: https://github.com/123srb/zmk-keyboard-skeletyl-handwired/tree/main
+      revision: main
+      path: modules/zmk-keyboard-skeletyl-handwired
   self:
     path: config
