@@ -26,6 +26,17 @@
             hold-while-undecided;
             bindings = <&kp>, <&kp>;
         };
+
+        hms: homerow_mods_safe {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_SAFE";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -34,8 +45,8 @@
         default_layer {
             bindings = <
     &kp Q       &kp W       &kp E       &kp R       &kp T                                   &kp Y           &kp U       &kp I       &kp O           &kp P
-    &hm LGUI A  &hm LALT S  &hm LSHFT D &hm LCTRL F &kp G                                   &kp H           &hm LCTRL J &hm LSHFT K &hm LALT L      &hm LGUI SQT
-    &kp Z       &hm RALT X  &kp C       &kp V       &kp B                                   &kp N           &kp M       &kp COMMA   &hm RALT DOT    &kp FSLH
+    &hms LGUI A &hms LALT S &hm LSHFT D  &hm LCTRL F  &kp G                                   &kp H           &hm LCTRL J &hm LSHFT K &hms LALT L     &hms LGUI SQT
+    &kp Z       &hms RALT X &kp C       &kp V       &kp B                                   &kp N           &kp M       &kp COMMA   &hms RALT DOT   &kp FSLH
                                         &kp BSPC       &lt MOUSE TAB  &lt NAV DEL  &lt SYM ESC   &lt NUM RET     &lt FUN SPACE
             >;
         };
